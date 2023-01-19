@@ -50,15 +50,22 @@ public class ElectionStatistics {
 	public void getWinner() {	
 		Set<Map.Entry<String, Integer>> entryset = Candidates.entrySet();
 		Map.Entry<String, Integer> [] candidatesArray = entryset.toArray(new Map.Entry[entryset.size()]);
+		boolean temp=true;
 		int highestvote= candidatesArray[0].getValue();
 		String winner= candidatesArray[0].getKey();
 		for(int  i=1; i<candidatesArray.length; i++) {
 			if(highestvote < candidatesArray[i].getValue()) {
 				highestvote= candidatesArray[i].getValue();
 				winner = candidatesArray[i].getKey();
+			} else if(highestvote == candidatesArray[i].getValue()) {
+				temp= false;
 			}
 		}
-		System.out.println("The Winner is "+ winner);
+		if(temp) {
+			System.out.println("The Winner is "+ winner);
+		} else {
+			System.out.println("All candidates have same votes, so there is no winner");	
+		}
 		
 	}
 	public static void main(String[] args) {
