@@ -28,6 +28,6 @@
    f)To exit from the program, Enter "exit"
 	>Program will get terminated
 
-Note:- * don't enter the command which are not listed, other wise you will get error measage.
+Note:- * don't enter the command which are not listed, other wise you will get error message.
        * All the commands are not case sensitive
  
